@@ -1,0 +1,7 @@
+E:\4. Programming\[4] PRACTICE - C#\[3] IKLC PV\PV2_Modul5_201401035\PV2_Modul5_201401035\obj\Debug\PV2_Modul5_201401035.csprojResolveAssemblyReference.cache
+E:\4. Programming\[4] PRACTICE - C#\[3] IKLC PV\PV2_Modul5_201401035\PV2_Modul5_201401035\obj\Debug\PV2_Modul5_201401035.MainForm.resources
+E:\4. Programming\[4] PRACTICE - C#\[3] IKLC PV\PV2_Modul5_201401035\PV2_Modul5_201401035\obj\Debug\PV2_Modul5_201401035.csproj.GenerateResource.Cache
+E:\4. Programming\[4] PRACTICE - C#\[3] IKLC PV\PV2_Modul5_201401035\PV2_Modul5_201401035\bin\Debug\PV2_Modul5_201401035.exe
+E:\4. Programming\[4] PRACTICE - C#\[3] IKLC PV\PV2_Modul5_201401035\PV2_Modul5_201401035\bin\Debug\PV2_Modul5_201401035.pdb
+E:\4. Programming\[4] PRACTICE - C#\[3] IKLC PV\PV2_Modul5_201401035\PV2_Modul5_201401035\obj\Debug\PV2_Modul5_201401035.exe
+E:\4. Programming\[4] PRACTICE - C#\[3] IKLC PV\PV2_Modul5_201401035\PV2_Modul5_201401035\obj\Debug\PV2_Modul5_201401035.pdb
