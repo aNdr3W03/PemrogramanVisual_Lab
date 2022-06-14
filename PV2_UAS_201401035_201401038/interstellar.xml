@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.0.3
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Jun 14, 2022 at 07:11 PM
+- Server version: 10.4.14-MariaDB
+- PHP Version: 7.2.34
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="interstellar" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="explore">
+                CREATE TABLE `explore` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `explore_id` varchar(10) NOT NULL,
+                  `star` varchar(64) NOT NULL,
+                  `object` varchar(64) NOT NULL,
+                  `mass` float DEFAULT NULL,
+                  `radius` float DEFAULT NULL,
+                  `period` float DEFAULT NULL,
+                  `distance` float DEFAULT NULL,
+                  `travel_time` float DEFAULT NULL,
+                  `price` int(16) DEFAULT NULL,
+                  `image` varchar(128) DEFAULT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="ticket_booking">
+                CREATE TABLE `ticket_booking` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `ticket_id` varchar(16) NOT NULL,
+                  `user_id` bigint(20) NOT NULL,
+                  `from_id` varchar(10) NOT NULL,
+                  `to_id` varchar(10) NOT NULL,
+                  `date` date NOT NULL,
+                  `boarding` time NOT NULL,
+                  `class` enum('X','S','A','B','C') NOT NULL,
+                  `launch_gate` varchar(3) NOT NULL,
+                  `seat` varchar(3) NOT NULL,
+                  `price` int(11) DEFAULT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="users">
+                CREATE TABLE `users` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `user_id` bigint(20) NOT NULL,
+                  `full_name` varchar(128) NOT NULL,
+                  `email` varchar(64) NOT NULL,
+                  `username` varchar(32) NOT NULL,
+                  `password` varchar(32) NOT NULL,
+                  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'interstellar'
+    -->
+    <database name="interstellar">
+        <!-- Table explore -->
+        <table name="explore">
+            <column name="id">1</column>
+            <column name="explore_id">TRAPPIST1d</column>
+            <column name="star">TRAPPIST-1</column>
+            <column name="object">TRAPPIST-1d</column>
+            <column name="mass">0.3</column>
+            <column name="radius">0.78</column>
+            <column name="period">4.05</column>
+            <column name="distance">39</column>
+            <column name="travel_time">78</column>
+            <column name="price">195000000</column>
+            <column name="image">2095TRAPPIST-1d.png</column>
+        </table>
+        <table name="explore">
+            <column name="id">2</column>
+            <column name="explore_id">PRXMCNTRIb</column>
+            <column name="star">Proxima Centauri</column>
+            <column name="object">Proxima Centauri b</column>
+            <column name="mass">1.27</column>
+            <column name="radius">0</column>
+            <column name="period">11.186</column>
+            <column name="distance">4.25</column>
+            <column name="travel_time">8.5</column>
+            <column name="price">195000000</column>
+            <column name="image">5192Proxima Centauri b.jpg</column>
+        </table>
+        <table name="explore">
+            <column name="id">3</column>
+            <column name="explore_id">KEPLR1649c</column>
+            <column name="star">Kepler-1649</column>
+            <column name="object">Kepler-1649c</column>
+            <column name="mass">0</column>
+            <column name="radius">1.06</column>
+            <column name="period">19.5</column>
+            <column name="distance">301</column>
+            <column name="travel_time">602</column>
+            <column name="price">853000000</column>
+            <column name="image">5701Kepler-1649c.png</column>
+        </table>
+        <table name="explore">
+            <column name="id">4</column>
+            <column name="explore_id">pltTOI700d</column>
+            <column name="star">TOI 700</column>
+            <column name="object">TOI 700 d</column>
+            <column name="mass">1.72</column>
+            <column name="radius">1.14</column>
+            <column name="period">37.4</column>
+            <column name="distance">101</column>
+            <column name="travel_time">202</column>
+            <column name="price">412000000</column>
+            <column name="image">7262TOI 700 d.jpg</column>
+        </table>
+        <table name="explore">
+            <column name="id">5</column>
+            <column name="explore_id">plROSS128b</column>
+            <column name="star">Ross 128</column>
+            <column name="object">Ross 128 b</column>
+            <column name="mass">1.4</column>
+            <column name="radius">0</column>
+            <column name="period">9.87</column>
+            <column name="distance">11.03</column>
+            <column name="travel_time">22.06</column>
+            <column name="price">354000000</column>
+            <column name="image">9627Ross 128 b.jpg</column>
+        </table>
+        <table name="explore">
+            <column name="id">6</column>
+            <column name="explore_id">plOUREARTH</column>
+            <column name="star">Sun</column>
+            <column name="object">Earth</column>
+            <column name="mass">1</column>
+            <column name="radius">1</column>
+            <column name="period">365</column>
+            <column name="distance">0</column>
+            <column name="travel_time">0</column>
+            <column name="price">50000000</column>
+            <column name="image">9995Earth.png</column>
+        </table>
+        <!-- Table ticket_booking -->
+        <table name="ticket_booking">
+            <column name="id">1</column>
+            <column name="ticket_id">2022052300000001</column>
+            <column name="user_id">101</column>
+            <column name="from_id">plOUREARTH</column>
+            <column name="to_id">PRXMCNTRIb</column>
+            <column name="date">2075-12-04</column>
+            <column name="boarding">10:00:00</column>
+            <column name="class">X</column>
+            <column name="launch_gate">X01</column>
+            <column name="seat">A08</column>
+            <column name="price">195000000</column>
+        </table>
+        <table name="ticket_booking">
+            <column name="id">2</column>
+            <column name="ticket_id">2022052300000002</column>
+            <column name="user_id">101</column>
+            <column name="from_id">plOUREARTH</column>
+            <column name="to_id">PRXMCNTRIb</column>
+            <column name="date">2075-12-04</column>
+            <column name="boarding">10:00:00</column>
+            <column name="class">X</column>
+            <column name="launch_gate">X01</column>
+            <column name="seat">A09</column>
+            <column name="price">195000000</column>
+        </table>
+        <table name="ticket_booking">
+            <column name="id">3</column>
+            <column name="ticket_id">2022052400000001</column>
+            <column name="user_id">102</column>
+            <column name="from_id">pltTOI700d</column>
+            <column name="to_id">plOUREARTH</column>
+            <column name="date">2081-08-17</column>
+            <column name="boarding">20:15:00</column>
+            <column name="class">A</column>
+            <column name="launch_gate">G12</column>
+            <column name="seat">C24</column>
+            <column name="price">50000000</column>
+        </table>
+        <table name="ticket_booking">
+            <column name="id">4</column>
+            <column name="ticket_id">2022052400000002</column>
+            <column name="user_id">102</column>
+            <column name="from_id">pltTOI700d</column>
+            <column name="to_id">plOUREARTH</column>
+            <column name="date">2081-08-17</column>
+            <column name="boarding">20:15:00</column>
+            <column name="class">A</column>
+            <column name="launch_gate">G12</column>
+            <column name="seat">C23</column>
+            <column name="price">50000000</column>
+        </table>
+        <table name="ticket_booking">
+            <column name="id">9</column>
+            <column name="ticket_id">2022052500000001</column>
+            <column name="user_id">101</column>
+            <column name="from_id">plOUREARTH</column>
+            <column name="to_id">TRAPPIST1d</column>
+            <column name="date">2022-05-25</column>
+            <column name="boarding">23:03:45</column>
+            <column name="class">A</column>
+            <column name="launch_gate">A88</column>
+            <column name="seat">A88</column>
+            <column name="price">195000000</column>
+        </table>
+        <table name="ticket_booking">
+            <column name="id">10</column>
+            <column name="ticket_id">2022060200000001</column>
+            <column name="user_id">101</column>
+            <column name="from_id">plROSS128b</column>
+            <column name="to_id">TRAPPIST1d</column>
+            <column name="date">2022-06-02</column>
+            <column name="boarding">10:02:03</column>
+            <column name="class">X</column>
+            <column name="launch_gate">A55</column>
+            <column name="seat">A10</column>
+            <column name="price">195000000</column>
+        </table>
+        <table name="ticket_booking">
+            <column name="id">12</column>
+            <column name="ticket_id">2022060400000001</column>
+            <column name="user_id">102</column>
+            <column name="from_id">plOUREARTH</column>
+            <column name="to_id">PRXMCNTRIb</column>
+            <column name="date">2022-06-04</column>
+            <column name="boarding">01:40:59</column>
+            <column name="class">S</column>
+            <column name="launch_gate">H05</column>
+            <column name="seat">A01</column>
+            <column name="price">195000000</column>
+        </table>
+        <!-- Table users -->
+        <table name="users">
+            <column name="id">1</column>
+            <column name="user_id">1</column>
+            <column name="full_name">admin1</column>
+            <column name="email">admin1@interxtellar.com</column>
+            <column name="username">admin1</column>
+            <column name="password">n5dWIilMajI=</column>
+            <column name="date">2022-06-12 09:41:09</column>
+        </table>
+        <table name="users">
+            <column name="id">2</column>
+            <column name="user_id">2</column>
+            <column name="full_name">admin2</column>
+            <column name="email">admin2@interxtellar.com</column>
+            <column name="username">admin2</column>
+            <column name="password">NHMR5J0/noA=</column>
+            <column name="date">2022-06-12 09:41:14</column>
+        </table>
+        <table name="users">
+            <column name="id">3</column>
+            <column name="user_id">3</column>
+            <column name="full_name">admin3</column>
+            <column name="email">admin3@interxtellar.com</column>
+            <column name="username">admin3</column>
+            <column name="password">Gve1X3uTpmM=</column>
+            <column name="date">2022-06-12 09:41:22</column>
+        </table>
+        <table name="users">
+            <column name="id">4</column>
+            <column name="user_id">101</column>
+            <column name="full_name">Andrew Benedictus Jamesie</column>
+            <column name="email">andrewbjamesie@yahoo.com</column>
+            <column name="username">andrew123</column>
+            <column name="password">djoxVBWYR7/u0TqFeLZUyQ==</column>
+            <column name="date">2022-06-04 01:18:34</column>
+        </table>
+        <table name="users">
+            <column name="id">5</column>
+            <column name="user_id">102</column>
+            <column name="full_name">Ariel Matius Surbakti</column>
+            <column name="email">arielmatiussurbakti@gmail.com</column>
+            <column name="username">ariel789</column>
+            <column name="password">lSZ3UlTUi3rKWoVJPJJ4tg==</column>
+            <column name="date">2022-05-24 04:04:15</column>
+        </table>
+    </database>
+</pma_xml_export>
